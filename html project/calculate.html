@@ -1,0 +1,65 @@
+
+<html>
+<head>
+    <title>Calculator</title>
+    <script>
+        function calculate() {
+            
+            var a = document.getElementById("x").value;  
+            var b = document.getElementById("y").value;  
+
+            
+            a = parseInt(a);
+            b = parseInt(b);
+
+            if (isNaN(a) || isNaN(b)) {
+                window.alert("Please enter valid numbers.");
+                
+            }
+
+            
+            var ch = prompt("Enter 1 for Add, 2 for Subtract, 3 for Multiply, or 4 for Divide:");
+
+            var result;
+
+            if (ch == 1) {
+                result = a + b;
+            } else if (ch == 2) {
+                result = a - b;
+            } else if (ch == 3) {
+                result = a * b;
+            } else if (ch == 4) {
+                if (b === 0) {
+                    window.alert("Cannot divide by zero!");
+                    return;
+                }
+                result = a / b;
+            } else {
+                window.alert("Invalid choice. Please enter 1, 2, 3, or 4.");
+                return;
+            }
+
+            
+            window.alert("The result is: " + result);
+
+        }
+    </script>
+</head>
+<body background="BAC.jpg">
+    <table align="center">
+
+    <tr>
+        <td>
+    <form onsubmit="calculate()">
+        First number: <input type="text" id="x"><br><br> <br>
+        Second number: <input type="text" id="y">
+        
+        <br><br><br>
+        
+        <input type="submit" value="Calculate">
+    </td>
+    </tr>
+    </table>
+    </form>
+</body>
+</html>

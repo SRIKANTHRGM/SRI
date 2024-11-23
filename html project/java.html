@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function add(){
+            var a, b, c;
+            a = document.getElementById("x").value;  
+            b = document.getElementById("y").value;  
+            c = parseInt(a) + parseInt(b);
+
+           
+            window.alert("Value of c is: " + c);
+
+            
+        }
+    </script>
+</head>
+<body>
+    <form>
+        First number: <input type="text" id="x">
+        Second number: <input type="text" id="y">
+        <input type="submit" value="Add" onclick="add()">
+    </form>
+</body>
+</html>
